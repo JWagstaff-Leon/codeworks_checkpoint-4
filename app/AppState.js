@@ -4,7 +4,7 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter
 {
     weather = null;
-    time = null;
+    time = { hour: null, minute: null, broken: false };
     quote = null;
     todoList = null;
     name = null;
