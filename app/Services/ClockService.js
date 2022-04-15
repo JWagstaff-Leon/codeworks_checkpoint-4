@@ -22,6 +22,17 @@ class ClockService
     {
         _updateClock();
     }
+
+    switchFormat()
+    {
+        const newTimeObj = 
+        {
+            hour: ProxyState.time.hour,
+            minute: ProxyState.time.minute,
+            broken: !ProxyState.time.broken
+        }
+        ProxyState.time = newTimeObj;
+    }
 }
 
 export const clockService = new ClockService();

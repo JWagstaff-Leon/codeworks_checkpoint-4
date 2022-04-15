@@ -14102,7 +14102,7 @@ main {
   flex-grow: 1;
 }
 
-.greeting {
+.text-card {
   background-color: rgba(35, 35, 35, 0.7);
   border-radius: 8px;
   backdrop-filter: blur(3px);

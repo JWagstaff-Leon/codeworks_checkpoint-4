@@ -29,16 +29,21 @@
         </div>
         <div class="row align-items-center justify-content-center flex-grow-1">
             <div class="col d-flex flex-column align-items-center justify-content-between">
-                <div class="text-center greeting px-4">
-                    <span class="text-light user-select-none" id="clock"></span>
+                <div class="text-center text-card px-4">
+                    <span class="text-light user-select-none" id="clock" onclick="app.clockController.switchFormat()"><!-- clock goes here --></span>
+                    <span class="text-light user-select-none"><span id="greeting"></span><span id="name"></span></span>
                 </div>
             </div>
         </div>
         <div class="row postion-relative align-items-center mt-3">
-            <div id="quote"></div>
-            <div class="todo">
-                <div id="todo">
-
+            <div class="col mb-1 d-flex justify-content-center">
+                <div class="py-3 px-5 fs-4 user-select-none text-card text-center d-flex flex-column text-light" id="quote">
+                    <!-- Quote template goes here -->
+                </div>
+                <div class="todo">
+                    <div id="todo">
+                        
+                    </div>
                 </div>
             </div>
         </div>

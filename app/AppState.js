@@ -5,7 +5,7 @@ class AppState extends EventEmitter
 {
     weather = null;
     time = { hour: null, minute: null, broken: false };
-    quote = null;
+    quote = { text: null, author: null };
     todoList = null;
     name = null;
     imageURL = null;
