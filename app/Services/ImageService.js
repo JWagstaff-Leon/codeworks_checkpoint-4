@@ -6,7 +6,6 @@ class ImageService
     async getBackground()
     {
         const res = await bcwApi.get("images");
-        console.log(res.data);
         ProxyState.imageURL = res.data.largeImgUrl;
     }
 }
