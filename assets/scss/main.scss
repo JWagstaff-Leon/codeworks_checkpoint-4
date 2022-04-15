@@ -1,0 +1,31 @@
+@import "./_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./_overrides.scss";
+@import "./custom.scss";
+@import "./loaders.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+}
+
+main {
+  flex-grow: 1;
+}
+
+// bounding container for clock and name
+.greeting
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+// bounding container for todo list
+.todo
+{
+    position: absolute;
+    bottom: 10vh;
+    right: 0px;
+}
