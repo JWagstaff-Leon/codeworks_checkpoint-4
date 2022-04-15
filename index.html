@@ -28,10 +28,14 @@
             </div>
         </div>
         <div class="row align-items-center justify-content-center flex-grow-1">
-            <div class="col d-flex flex-column align-items-center justify-content-between">
-                <div class="text-center text-card px-4">
+            <div class="col d-flex align-items-center justify-content-center">
+                <div class="d-flex flex-column text-center text-card px-4">
                     <span class="text-light user-select-none" id="clock" onclick="app.clockController.switchFormat()"><!-- clock goes here --></span>
-                    <span class="text-light user-select-none"><span id="greeting"></span><span id="name"></span></span>
+                    <span class="text-light user-select-none action mb-2 fs-3" onclick="app.nameController.selectName()">
+                        <span id="greeting"></span>
+                        <span id="name-span"></span>
+                        <input id="name-input" class="d-none" onblur="app.nameController.changeName()" onchange="app.nameController.changeName()"></input>
+                    </span>
                 </div>
             </div>
         </div>

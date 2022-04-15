@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
-import "../Services/ClockService.js"; //need the constructor to run, but don't need it for anything else
 import { clockService } from "../Services/ClockService.js";
+import { Pop } from "../Utils/Pop.js";
 
 function _drawClock()
 {
