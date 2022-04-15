@@ -14094,7 +14094,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #e5e5e5;
+  background-size: cover;
+  background-position: center;
 }
 
 main {
@@ -14102,14 +14103,19 @@ main {
 }
 
 .greeting {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(35, 35, 35, 0.7);
   border-radius: 8px;
+  backdrop-filter: blur(3px);
 }
 
 .todo {
   position: absolute;
   bottom: 10vh;
   right: 0px;
+}
+
+#clock {
+  font-size: 10em;
 }
 
 /*# sourceMappingURL=main.css.map */
