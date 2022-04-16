@@ -12,11 +12,24 @@ function _drawQuote()
     document.getElementById("quote").innerHTML = quoteTemplate;
 }
 
+function _getQuote()
+{
+    try
+    {
+        quoteService.getQuote();
+    }
+    catch(error)
+    {
+        console.error("[GET QUOTE ERROR]", error.message);
+        Pop.toast(error.message, "error");
+    }
+}
+
 export class QuoteController
 {
     constructor()
     {
         ProxyState.on("quote", _drawQuote);
-        quoteService.getQuote();
+        _getQuote();
     }
 }

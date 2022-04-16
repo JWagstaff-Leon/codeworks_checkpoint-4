@@ -7,11 +7,24 @@ function _drawBackground()
     bodyElem.style["background-image"] = `url("${ProxyState.imageURL}")`;
 }
 
+function _getBackground()
+{
+    try
+    {
+        imageService.getBackground();
+    }
+    catch(error)
+    {
+        console.error("[GET BACKGROUND ERROR]", error.message);
+        Pop.toast(error.message, "error");
+    }
+}
+
 export class ImageController
 {
     constructor()
     {
         ProxyState.on("imageURL", _drawBackground);
-        imageService.getBackground();
+        _getBackground();
     }
 }
