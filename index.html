@@ -21,10 +21,16 @@
 <main class="d-flex">
     <div class="container-fluid d-flex flex-column flex-grow-1">
         <div class="row">
-            <div class="col-12 d-flex justify-content-end">
+            <div class="col-12 d-flex justify-content-between">
                 <div id="weather">
                     <!-- Weather template will go here -->
                 </div>
+                <button class="btn text-card bg-dark text-light mt-2 px-4 py-3" data-bs-toggle="offcanvas" data-bs-target="#todo-offcanvas">
+                    <div class="d-flex flex-column">
+                        <span>Todo List</span>
+                        <span><span id="remaining-todos-button"></span> undone</span>
+                    </div>
+                </button>
             </div>
         </div>
         <div class="row align-items-center justify-content-center flex-grow-1">
@@ -39,20 +45,36 @@
                 </div>
             </div>
         </div>
-        <div class="row postion-relative align-items-center mt-3">
+        <div class="row postion-relative mt-3">
             <div class="col mb-1 d-flex justify-content-center">
                 <div class="py-3 px-5 fs-4 user-select-none text-card text-center d-flex flex-column text-light" id="quote">
                     <!-- Quote template goes here -->
-                </div>
-                <div class="todo">
-                    <div id="todo">
-                        
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
+
+<div class="offcanvas offcanvas-end bg-dark text-light" tabindex="-1" id="todo-offcanvas">
+    <div class="offcanvas-header">
+      <h4>Todo List</h4>
+      <h6><span id="remaining-todos-offcanvas"></span> remaining</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <form onsubmit="app.todosController.createTodo()">
+        <label class="visually-hidden" for="name">New Todo Name</label>
+        <div class="input-group px-2">
+            <input type="text" class="form-control bg-light" name="description" id="description" placeholder="New Todo" value="" required>
+            <button type="submit" class="input-group-text">Add Todo</button>
+        </div>
+    </form>
+    <div class="offcanvas-body">
+        <div id="todo-list">
+                                
+        </div>
+    </div>
+</div>
+
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
