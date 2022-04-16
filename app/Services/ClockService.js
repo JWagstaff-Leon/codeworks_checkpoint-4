@@ -6,8 +6,7 @@ function _updateClock()
     const newTimeObj = 
         {
             hour: newTime.getHours(),
-            minute: newTime.getMinutes(),
-            broken: ProxyState.time.broken
+            minute: newTime.getMinutes()
         }
     
     ProxyState.time = newTimeObj;
@@ -25,13 +24,7 @@ class ClockService
 
     switchFormat()
     {
-        const newTimeObj = 
-        {
-            hour: ProxyState.time.hour,
-            minute: ProxyState.time.minute,
-            broken: !ProxyState.time.broken
-        }
-        ProxyState.time = newTimeObj;
+        ProxyState.brokenTime = !ProxyState.brokenTime;
     }
 }
 
