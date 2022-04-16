@@ -6,7 +6,6 @@ class QuoteService
     async getQuote()
     {
         const res = await bcwApi.get("quotes");
-        console.log(res);
         const newQuoteObj =
         {
             text: res.data.content,
