@@ -29,9 +29,21 @@ main {
     font-size: 10em;
 }
 
-#name, #name:focus
+#name-input, #name-input:focus
 {
     background-color: rgba(0, 0, 0, 0);
     outline: none;
     border: none;
+}
+
+#quote
+{
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+.top-boxes>div
+{
+    position: absolute;
+    top: 0.5rem;
 }

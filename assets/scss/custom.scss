@@ -94,10 +94,13 @@
 .on-hover {
   transition: all 0.2s linear;
   opacity: 0;
+  line-height: 0em;
   pointer-events: none;
+  position: relative;
 }
 *:hover > .on-hover {
   opacity: 1;
+  line-height: 1em;
   pointer-events: all;
 }
 

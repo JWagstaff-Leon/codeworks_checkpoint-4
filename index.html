@@ -20,7 +20,7 @@
 
 <main class="d-flex">
     <div class="container-fluid d-flex flex-column flex-grow-1">
-        <div class="row">
+        <div class="row position-relative top-boxes">
             <div class="col-12 d-flex justify-content-between mt-2">
                 <div id="weather" class="d-flex text-card text-light pe-3 py-1 user-select-none" onclick="app.weatherController.toggleUnits()">
                     <!-- Weather template will go here -->
@@ -40,13 +40,13 @@
                     <span class="text-light user-select-none action mb-2 fs-3" onclick="app.nameController.selectName()" title="Click to enter name">
                         <span id="greeting"></span>
                         <span id="name-span"></span>
-                        <input id="name-input" class="d-none" onblur="app.nameController.changeName()" onchange="app.nameController.changeName()"></input>
+                        <input id="name-input" class="d-none text-light" onblur="app.nameController.changeName()" onchange="app.nameController.changeName()" placeholder="Your name here"></input>
                     </span>
                 </div>
             </div>
         </div>
         <div class="row postion-relative mt-3">
-            <div class="col mb-1 d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
                 <div class="py-3 px-5 fs-4 user-select-none text-card text-center d-flex flex-column text-light" id="quote">
                     <!-- Quote template goes here -->
                 </div>

@@ -13829,11 +13829,14 @@ textarea.form-control-lg {
 .on-hover {
   transition: all 0.2s linear;
   opacity: 0;
+  line-height: 0em;
   pointer-events: none;
+  position: relative;
 }
 
 *:hover > .on-hover {
   opacity: 1;
+  line-height: 1em;
   pointer-events: all;
 }
 
@@ -14112,10 +14115,20 @@ main {
   font-size: 10em;
 }
 
-#name, #name:focus {
+#name-input, #name-input:focus {
   background-color: rgba(0, 0, 0, 0);
   outline: none;
   border: none;
+}
+
+#quote {
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.top-boxes > div {
+  position: absolute;
+  top: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
