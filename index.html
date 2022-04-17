@@ -27,7 +27,7 @@
                 </div>
                 <button class="btn text-card bg-dark text-light px-4 py-3" data-bs-toggle="offcanvas" data-bs-target="#todo-offcanvas">
                     <div class="d-flex flex-column">
-                        <span>Todo List</span>
+                        <span>To Do List</span>
                         <span><span id="remaining-todos-button"></span> undone</span>
                     </div>
                 </button>
@@ -57,15 +57,15 @@
 
 <div class="offcanvas offcanvas-end bg-dark text-light" tabindex="-1" id="todo-offcanvas">
     <div class="offcanvas-header">
-      <h4>Todo List</h4>
+      <h4>To Do List</h4>
       <h6><span id="remaining-todos-offcanvas"></span> remaining</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <form onsubmit="app.todosController.createTodo()">
-        <label class="visually-hidden" for="name">New Todo Name</label>
+        <label class="visually-hidden" for="name">New To Do Name</label>
         <div class="input-group px-2">
             <input type="text" class="form-control bg-light" name="description" id="description" placeholder="New Todo" value="" required>
-            <button type="submit" class="input-group-text">Add Todo</button>
+            <button type="submit" class="input-group-text">Add To Do</button>
         </div>
     </form>
     <div class="offcanvas-body">
