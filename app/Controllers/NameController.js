@@ -7,12 +7,10 @@ function _drawName()
     if(typeof ProxyState.name === "string" && ProxyState.name.length > 0)
     {
         document.getElementById("name-span").innerText = ProxyState.name;
-        document.getElementById("name-span").innerText = ProxyState.name;
-        document.getElementById("name-span").innerText = ProxyState.name;
     }
     else
     {
-        document.getElementById("name-span").value = "";
+        document.getElementById("name-span").innerText = "";
     }
 }
 
@@ -59,11 +57,12 @@ export class NameController
         ProxyState.on("name", _drawGreeting);
         ProxyState.on("time", _drawGreeting);
         _drawGreeting()
+        _drawName();
     }
 
     selectName()
     {
-        document.getElementById("name-input").value = ProxyState.name;
+        document.getElementById("name-input").value = "";
         document.getElementById("name-span").classList.add("d-none");
         document.getElementById("name-input").classList.remove("d-none");
         document.getElementById("name-input").focus();
