@@ -15,16 +15,27 @@ function _updateClock()
     setTimeout(_updateClock, nextMinuteInMilliseconds);
 }
 
+function _saveFormat()
+{
+    window.localStorage.setItem("inspire_timeFormat", ProxyState.brokenTime);
+}
+
 class ClockService
 {
     constructor()
     {
+        const loadedFormat = window.localStorage.getItem("inspire_timeFormat");
+        if(loadedFormat)
+        {
+            ProxyState.brokenTime = loadedFormat === "true" ? true : false;
+        }
         _updateClock();
     }
 
     switchFormat()
     {
         ProxyState.brokenTime = !ProxyState.brokenTime;
+        _saveFormat();
     }
 }
 
