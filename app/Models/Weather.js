@@ -17,7 +17,7 @@ export class Weather
         <div>
             <img src="http://openweathermap.org/img/wn/${this.weatherIcon}@2x.png" title="${this.weatherText}" />
         </div>
-        <div class="d-flex flex-column text-center justify-content-center" tilte="Feels Like ${this.feelsLike.toFixed(1)}°C">
+        <div class="d-flex flex-column text-center justify-content-center" title="Feels Like ${this.feelsLike.toFixed(1)}°C">
             <span class="fs-3">${this.temperature.toFixed(1)}°C</span>
             <span class="on-hover">${this.low.toFixed(0)}°C | ${this.high.toFixed(0)}°C</span>
         <div>
