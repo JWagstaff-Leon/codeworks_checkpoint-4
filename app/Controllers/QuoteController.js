@@ -6,7 +6,7 @@ function _drawQuote()
     const quoteTemplate = 
     `
     <span>${ProxyState.quote.text}</span>
-    <span class="on-hover fst-italic">${ProxyState.quote.author}</span>
+    <span class="on-hover fst-italic mt-1">${ProxyState.quote.author}</span>
     `;
 
     document.getElementById("quote").innerHTML = quoteTemplate;
