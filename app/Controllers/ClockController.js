@@ -5,8 +5,8 @@ import { Pop } from "../Utils/Pop.js";
 function _drawClock()
 {
     let timeString = "";
-    // requisite nested ternary
-    timeString += ProxyState.brokenTime ? ProxyState.time.hour % 12 : ( ProxyState.time.hour < 10 ? "0" + ProxyState.time.hour : ProxyState.time.hour);
+    // requisite nested ternaries
+    timeString += ProxyState.brokenTime ? ( ProxyState.time.hour % 12 === 0 ? "12" : ProxyState.time.hour % 12 ) : ( ProxyState.time.hour < 10 ? "0" + ProxyState.time.hour : ProxyState.time.hour);
     timeString += ":";
     timeString += ProxyState.time.minute < 10 ? "0" + ProxyState.time.minute : ProxyState.time.minute;
     if(ProxyState.brokenTime)
