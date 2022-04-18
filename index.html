@@ -22,7 +22,7 @@
     <div class="container-fluid d-flex flex-column flex-grow-1">
         <div class="row position-relative top-boxes">
             <div class="col-12 d-flex justify-content-between mt-2">
-                <div id="weather" class="d-flex text-card text-light pe-3 py-1 user-select-none" onclick="app.weatherController.toggleUnits()">
+                <div id="weather" class="d-flex text-card text-light pe-3 py-1 user-select-none action" onclick="app.weatherController.toggleUnits()">
                     <!-- Weather template will go here -->
                 </div>
                 <button class="btn text-card bg-dark text-light px-4 py-3" data-bs-toggle="offcanvas" data-bs-target="#todo-offcanvas">
@@ -36,7 +36,7 @@
         <div class="row align-items-center justify-content-center flex-grow-1">
             <div class="col d-flex align-items-center justify-content-center">
                 <div class="d-flex flex-column text-center text-card px-4">
-                    <span class="text-light user-select-none" id="clock" onclick="app.clockController.switchFormat()"><!-- clock goes here --></span>
+                    <span class="text-light user-select-none action" id="clock" onclick="app.clockController.switchFormat()"><!-- clock goes here --></span>
                     <span class="text-light user-select-none action mb-2 fs-3" onclick="app.nameController.selectName()" title="Click to enter name">
                         <span id="greeting"></span>
                         <span id="name-span"></span>
