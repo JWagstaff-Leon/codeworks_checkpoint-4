@@ -9,6 +9,8 @@ export class Weather
 
         this.weatherIcon = data.weather[0].icon;
         this.weatherText = data.weather[0].description;
+        // Capitalize each word
+        this.weatherText = this.weatherText.split(" ").map(word => word[0].toUpperCase() + word.substring(1)).join(" ");
     }
 
     get CelciusTemplate()
